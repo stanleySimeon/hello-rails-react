@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  root 'greetings#index'
+  namespace :api do
+    namespace :v1 do
+      get 'messages', to: 'greetings#index'
+    end
+  end
 end
