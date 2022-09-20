@@ -2931,3 +2931,138 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 208)
 
 
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:52:57 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1586)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:52:59 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (2.1ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 586)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:55:42 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 22)
+Completed 200 OK in 11ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:56:03 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 15)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 208)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:56:04 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 208)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:56:04 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 208)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:56:54 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 05:56:55 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 05:59:19 +0100
+  
+NameError (uninitialized constant Api
+
+class Api::V1::GreetingsController < ApplicationController
+      ^^^):
+  
+app/controllers/greetings_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-09-20 05:59:20 +0100
+  
+NameError (uninitialized constant Api
+
+class Api::V1::GreetingsController < ApplicationController
+      ^^^):
+  
+app/controllers/greetings_controller.rb:1:in `<main>'
+Started GET "/" for ::1 at 2022-09-20 05:59:32 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 123)
+[Webpacker] Compiling...
+Started GET "/" for ::1 at 2022-09-20 05:59:33 +0100
+[Webpacker] Compiled all packs in /Users/stanleymartialsimeon/Documents/GitHub/microverse/rails/hello-rails-react/public/packs
+[Webpacker] assets by chunk 220 KiB (id hint: vendors)
+  asset js/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_hotwired_turbo-rails_app-62f9e0.js 189 KiB [compared for emit] (id hint: vendors) 1 related asset
+  asset js/actioncable.chunk.js 30.9 KiB [compared for emit] (name: actioncable) (id hint: vendors) 1 related asset
+asset js/runtime.js 10.8 KiB [compared for emit] (name: runtime) 1 related asset
+asset js/application.js 4.03 KiB [compared for emit] (name: application) 1 related asset
+asset manifest.json 1.07 KiB [emitted] [compared for emit]
+Entrypoint application 204 KiB (226 KiB) = js/runtime.js 10.8 KiB js/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_hotwired_turbo-rails_app-62f9e0.js 189 KiB js/application.js 4.03 KiB 3 auxiliary assets
+runtime modules 6.6 KiB 9 modules
+modules by path ../../../../../node_modules/ 136 KiB
+  modules by path ../../../../../node_modules/@rails/actioncable/src/*.js 19.1 KiB
+    ../../../../../node_modules/@rails/actioncable/src/index.js 869 bytes [built] [code generated]
+    + 9 modules
+  modules by path ../../../../../node_modules/@hotwired/ 117 KiB
+    ../../../../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/index.js 285 bytes [built] [code generated]
+    + 5 modules
+modules by path ./ 64.9 KiB
+  modules by path ./app/javascript/controllers/*.js 711 bytes
+    ./app/javascript/controllers/index.js 335 bytes [built] [code generated]
+    ./app/javascript/controllers/application.js 218 bytes [built] [code generated]
+    ./app/javascript/controllers/hello_controller.js 158 bytes [built] [code generated]
+  ./app/javascript/application.js 112 bytes [built] [code generated]
+  ./node_modules/@hotwired/stimulus/dist/stimulus.js 64.1 KiB [built] [code generated]
+webpack 5.74.0 compiled successfully in 547 ms
+
+  Rendered layout layouts/application.html.erb (Duration: 2637.6ms | Allocations: 75094)
+Completed 200 OK in 2647ms (Views: 2644.5ms | ActiveRecord: 0.0ms | Allocations: 76085)
+
+
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+Started GET "/" for ::1 at 2022-09-20 05:59:35 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4347)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms | Allocations: 4977)
+
+
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3437)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 3698)
+
+
