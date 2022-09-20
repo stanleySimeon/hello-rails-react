@@ -1,5 +1,5 @@
 class Api::V1::GreetingsController < ApplicationController
-  before_action :set_greeting, only: [:show, :update, :destroy]
+  before_action :set_greeting, only: %i[show update destroy]
   def index
     @greetings = Greeting.all
     render json: @greetings
