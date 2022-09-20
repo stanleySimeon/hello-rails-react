@@ -777,3 +777,2157 @@ Did you mean?  javascript_tag):
     13: 
   
 app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:38:18 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 28.4ms | Allocations: 4196)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 4284)
+Completed 500 Internal Server Error in 36ms (Allocations: 5042)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000013e48>
+
+    '.freeze;@output_buffer.append=( react_component("Greetings", { name: "David" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    1: <div id="root">
+    2:     <%= react_component("Greetings", { name: "David" }) %>
+    3: </div>
+  
+app/views/greetings/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-20 03:38:19 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 4015)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 4095)
+Completed 500 Internal Server Error in 29ms (Allocations: 4321)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000014168>
+
+    '.freeze;@output_buffer.append=( react_component("Greetings", { name: "David" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    1: <div id="root">
+    2:     <%= react_component("Greetings", { name: "David" }) %>
+    3: </div>
+  
+app/views/greetings/index.html.erb:2
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (4.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (40.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_react_development"[0m
+  [1m[35m (29.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "hello_rails_react_test"[0m
+  [1m[35m (182.3ms)[0m  [1m[35mCREATE DATABASE "hello_rails_react_development" ENCODING = 'unicode'[0m
+  [1m[35m (88.6ms)[0m  [1m[35mCREATE DATABASE "hello_rails_react_test" ENCODING = 'unicode'[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6835469566630085430)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGreetings (20220920024145)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "greetings" ("id" bigserial primary key, "message" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220920024145"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (22.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-20 02:42:35.474525"], ["updated_at", "2022-09-20 02:42:35.474525"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6835469566630085430)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-09-20 03:42:48 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 16.4ms | Allocations: 4001)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 4089)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 4668)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000017b88>
+
+    '.freeze;@output_buffer.append=( react_component("Greetings", { name: "David" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    1: <div id="root">
+    2:     <%= react_component("Greetings", { name: "David" }) %>
+    3: </div>
+  
+app/views/greetings/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-20 03:42:50 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 4015)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 4094)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4322)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000017ea8>
+
+    '.freeze;@output_buffer.append=( react_component("Greetings", { name: "David" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    1: <div id="root">
+    2:     <%= react_component("Greetings", { name: "David" }) %>
+    3: </div>
+  
+app/views/greetings/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-20 03:42:51 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 4015)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 4094)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4305)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000018178>
+
+    '.freeze;@output_buffer.append=( react_component("Greetings", { name: "David" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    1: <div id="root">
+    2:     <%= react_component("Greetings", { name: "David" }) %>
+    3: </div>
+  
+app/views/greetings/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-20 03:43:12 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 6410)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.0ms | Allocations: 7176)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x000000000184c0>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:43:13 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 5770)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 5999)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x00000000018790>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:44:20 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 6039)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms | Allocations: 6804)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000018ad8>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { name: "React" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    12:   </head>
+    13: 
+    14:   <body>
+    15:     <%= react_component("HelloWorld", { name: "React" }) %>
+    16:     <%= yield %>
+    17:   </body>
+    18: </html>
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2022-09-20 03:44:21 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 5414)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms | Allocations: 5643)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000018df8>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { name: "React" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    12:   </head>
+    13: 
+    14:   <body>
+    15:     <%= react_component("HelloWorld", { name: "React" }) %>
+    16:     <%= yield %>
+    17:   </body>
+    18: </html>
+  
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2022-09-20 03:44:36 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 1902)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 2707)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:44:36 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 1309)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms | Allocations: 1563)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:44:37 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 1291)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 1527)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:46:08 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 1893)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 2694)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:46:09 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1309)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.0ms | Allocations: 1563)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:46:15 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 73.0ms | Allocations: 6386)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms | Allocations: 7157)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x000000000192d0>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:46:16 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 6470)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.0ms | Allocations: 6904)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x00000000019370>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/index" for ::1 at 2022-09-20 03:46:22 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2022-09-20 03:46:28 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 5901)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms | Allocations: 6144)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x00000000019b40>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:47:52 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 3799)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4565)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:47:53 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3237)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3466)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:48:46 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3237)
+Completed 500 Internal Server Error in 21ms (Allocations: 3446)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:48:47 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3237)
+Completed 500 Internal Server Error in 8ms (Allocations: 3446)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:48:48 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3235)
+Completed 500 Internal Server Error in 8ms (Allocations: 3444)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:48:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 332)
+  Rendered layout layouts/application.html.erb (Duration: 70.0ms | Allocations: 22630)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 0.0ms | Allocations: 25896)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:48:57 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3409)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 3663)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:48:57 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 33)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 6485)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 7236)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:49:36 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 6134)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms | Allocations: 6909)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000b068>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:49:38 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 5462)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms | Allocations: 5691)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000b360>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:49:48 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 1906)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 2741)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:49:49 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1347)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 1607)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:49:57 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 6066)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms | Allocations: 6837)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000b748>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:49:57 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 5481)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms | Allocations: 5710)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000ba40>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:52:07 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 40.4ms | Allocations: 5483)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 5694)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000bd38>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:52:08 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 5483)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 5694)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000c030>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:52:09 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 7012)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 7578)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000c0d0>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:52:10 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 5483)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms | Allocations: 5694)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000c5f8>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    11:   </head>
+    12: 
+    13:   <body>
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:56:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 332)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/stanleymartialsimeon/Documents/GitHub/microverse/rails/hello-rails-react/public/packs
+[Webpacker] assets by chunk 220 KiB (id hint: vendors)
+  asset js/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_hotwired_turbo-rails_app-62f9e0.js 189 KiB [emitted] (id hint: vendors) 1 related asset
+  asset js/actioncable.chunk.js 30.9 KiB [emitted] (name: actioncable) (id hint: vendors) 1 related asset
+asset js/runtime.js 10.8 KiB [emitted] (name: runtime) 1 related asset
+asset js/application.js 4.03 KiB [emitted] (name: application) 1 related asset
+asset manifest.json 1.07 KiB [emitted]
+Entrypoint application 204 KiB (226 KiB) = js/runtime.js 10.8 KiB js/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_hotwired_turbo-rails_app-62f9e0.js 189 KiB js/application.js 4.03 KiB 3 auxiliary assets
+runtime modules 6.6 KiB 9 modules
+modules by path ../../../../../node_modules/ 136 KiB
+  modules by path ../../../../../node_modules/@rails/actioncable/src/*.js 19.1 KiB
+    ../../../../../node_modules/@rails/actioncable/src/index.js 869 bytes [built] [code generated]
+    + 9 modules
+  modules by path ../../../../../node_modules/@hotwired/ 117 KiB
+    ../../../../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/index.js 285 bytes [built] [code generated]
+    + 5 modules
+modules by path ./ 64.9 KiB
+  modules by path ./app/javascript/controllers/*.js 711 bytes
+    ./app/javascript/controllers/index.js 335 bytes [built] [code generated]
+    ./app/javascript/controllers/application.js 218 bytes [built] [code generated]
+    ./app/javascript/controllers/hello_controller.js 158 bytes [built] [code generated]
+  ./app/javascript/application.js 112 bytes [built] [code generated]
+  ./node_modules/@hotwired/stimulus/dist/stimulus.js 64.1 KiB [built] [code generated]
+webpack 5.74.0 compiled successfully in 526 ms
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 2502.7ms | Allocations: 70776)
+Completed 200 OK in 2513ms (Views: 2507.6ms | ActiveRecord: 0.0ms | Allocations: 74090)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:57:02 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 14483)
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.0ms | Allocations: 15347)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x0000000000af78>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag 'application' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:57:04 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 6040)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms | Allocations: 6294)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x0000000000b298>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag 'application' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:58:26 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 6085)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 6664)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x0000000000ec90>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag 'application' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:58:27 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 5843)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.0ms | Allocations: 6077)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `javascript_importmap_tags' for #<ActionView::Base:0x0000000000efb0>
+
+    '.freeze;@output_buffer.append=( javascript_importmap_tags );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_tag):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_importmap_tags %>
+    11:     <%= javascript_pack_tag 'application' %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:59:06 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 4798)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 5566)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    10:     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    11:     <%= javascript_pack_tag "application", "data-turbo-track": "reload", defer: true %>
+    12:   </head>
+    13: 
+  
+app/views/layouts/application.html.erb:10
+Started GET "/" for ::1 at 2022-09-20 03:59:14 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 3890)
+Completed 200 OK in 37ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 4723)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:59:15 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 3306)
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.0ms | Allocations: 3560)
+
+
+Started GET "/" for ::1 at 2022-09-20 03:59:26 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 4292)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 4380)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 5153)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x0000000000f6b8>
+
+    '.freeze;@output_buffer.append=( react_component("Greetings", { name: "David" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    1: <div id="root">
+    2:     <%= react_component("Greetings", { name: "David" }) %>
+    3: </div>
+  
+app/views/greetings/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-20 03:59:27 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 4081)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 4160)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 4389)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x0000000000f9b0>
+
+    '.freeze;@output_buffer.append=( react_component("Greetings", { name: "David" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    1: <div id="root">
+    2:     <%= react_component("Greetings", { name: "David" }) %>
+    3: </div>
+  
+app/views/greetings/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-20 03:59:53 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 8010)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms | Allocations: 8775)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x0000000000fd20>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { name: "React" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { name: "React" }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 03:59:54 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 7364)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms | Allocations: 7593)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000010018>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { name: "React" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { name: "React" }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:04:14 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/stanleymartialsimeon/Documents/GitHub/microverse/rails/hello-rails-react/public/packs
+[Webpacker] assets by chunk 220 KiB (id hint: vendors)
+  asset js/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_hotwired_turbo-rails_app-62f9e0.js 189 KiB [compared for emit] (id hint: vendors) 1 related asset
+  asset js/actioncable.chunk.js 30.9 KiB [compared for emit] (name: actioncable) (id hint: vendors) 1 related asset
+asset js/runtime.js 10.8 KiB [compared for emit] (name: runtime) 1 related asset
+asset js/application.js 4.03 KiB [compared for emit] (name: application) 1 related asset
+asset manifest.json 1.07 KiB [compared for emit]
+Entrypoint application 204 KiB (226 KiB) = js/runtime.js 10.8 KiB js/vendors-node_modules_hotwired_stimulus_dist_stimulus_js-node_modules_hotwired_turbo-rails_app-62f9e0.js 189 KiB js/application.js 4.03 KiB 3 auxiliary assets
+runtime modules 6.6 KiB 9 modules
+modules by path ../../../../../node_modules/ 136 KiB
+  modules by path ../../../../../node_modules/@rails/actioncable/src/*.js 19.1 KiB
+    ../../../../../node_modules/@rails/actioncable/src/index.js 869 bytes [built] [code generated]
+    + 9 modules
+  modules by path ../../../../../node_modules/@hotwired/ 117 KiB
+    ../../../../../node_modules/@hotwired/turbo-rails/app/javascript/turbo/index.js 285 bytes [built] [code generated]
+    + 5 modules
+modules by path ./ 64.9 KiB
+  modules by path ./app/javascript/controllers/*.js 711 bytes
+    ./app/javascript/controllers/index.js 335 bytes [built] [code generated]
+    ./app/javascript/controllers/application.js 218 bytes [built] [code generated]
+    ./app/javascript/controllers/hello_controller.js 158 bytes [built] [code generated]
+  ./app/javascript/application.js 112 bytes [built] [code generated]
+  ./node_modules/@hotwired/stimulus/dist/stimulus.js 64.1 KiB [built] [code generated]
+webpack 5.74.0 compiled successfully in 438 ms
+
+  Rendered layout layouts/application.html.erb (Duration: 1946.9ms | Allocations: 8360)
+Completed 500 Internal Server Error in 1950ms (ActiveRecord: 0.0ms | Allocations: 8939)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000013a88>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { name: "React" }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { name: "React" }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:04:42 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 104.4ms | Allocations: 8012)
+Completed 500 Internal Server Error in 127ms (ActiveRecord: 0.0ms | Allocations: 8795)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000013e20>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { greeting: "Hello from react-rails." }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:04:43 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 7366)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms | Allocations: 7595)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000014140>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { greeting: "Hello from react-rails." }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:09:17 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 43.7ms | Allocations: 7064)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms | Allocations: 7829)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x000000000144d8>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { greeting: "Hello from react-rails." }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:09:18 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 6422)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms | Allocations: 6651)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x000000000147f8>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { greeting: "Hello from react-rails." }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:09:22 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 31.5ms | Allocations: 6422)
+Completed 500 Internal Server Error in 32ms (Allocations: 6631)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000014ac8>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { greeting: "Hello from react-rails." }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:09:23 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 10356)
+Completed 500 Internal Server Error in 27ms (Allocations: 10720)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000014b68>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { greeting: "Hello from react-rails." }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:09:24 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 6422)
+Completed 500 Internal Server Error in 25ms (Allocations: 6631)
+
+
+  
+ActionView::Template::Error (undefined method `react_component' for #<ActionView::Base:0x00000000015090>
+
+    '.freeze;@output_buffer.append=( react_component("HelloWorld", { greeting: "Hello from react-rails." }) );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^):
+    11:   </head>
+    12: 
+    13:   <body>
+    14:     <%= react_component("HelloWorld", { greeting: "Hello from react-rails." }) %>
+    15:     <%= yield %>
+    16:   </body>
+    17: </html>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2022-09-20 04:10:34 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 2958)
+Completed 200 OK in 22ms (Views: 19.7ms | Allocations: 3753)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:10:35 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 2365)
+Completed 200 OK in 12ms (Views: 12.2ms | Allocations: 2615)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:11:42 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 2362)
+Completed 200 OK in 20ms (Views: 18.4ms | Allocations: 2595)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:11:43 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 2364)
+Completed 200 OK in 11ms (Views: 10.8ms | Allocations: 2598)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:13:01 +0100
+Processing by GreetingsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering greetings/index.html.erb within layouts/application
+  Rendered greetings/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 2365)
+Completed 200 OK in 18ms (Views: 17.0ms | Allocations: 2598)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:14:22 +0100
+Processing by GreetingsController#index as HTML
+  Rendering greetings/index.html.erb
+  Rendered greetings/index.html.erb (Duration: 1.2ms | Allocations: 129)
+Completed 200 OK in 4ms (Views: 2.8ms | Allocations: 834)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:14:23 +0100
+Processing by GreetingsController#index as HTML
+  Rendering greetings/index.html.erb
+  Rendered greetings/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 192)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:14:25 +0100
+Processing by GreetingsController#index as HTML
+  Rendering greetings/index.html.erb
+  Rendered greetings/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 1ms (Views: 0.9ms | Allocations: 181)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:14:25 +0100
+Processing by GreetingsController#index as HTML
+  Rendering greetings/index.html.erb
+  Rendered greetings/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 2ms (Views: 1.6ms | Allocations: 181)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:25:20 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:25:21 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:25:22 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:25:22 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:26:14 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:26:15 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:26:15 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:26:43 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:26:44 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:27:33 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:27:34 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:27:51 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:27:52 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:27:53 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:32:33 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 302)
+Completed 200 OK in 4ms (Views: 2.9ms | Allocations: 1123)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:32:34 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 296)
+Completed 200 OK in 6ms (Views: 5.0ms | Allocations: 963)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:32:34 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.8ms | Allocations: 221)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:32:34 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.6ms | Allocations: 198)
+
+
+Started GET "/index.js" for ::1 at 2022-09-20 04:32:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index.js"):
+  
+Started GET "/index" for ::1 at 2022-09-20 04:32:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/show" for ::1 at 2022-09-20 04:32:50 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/show"):
+  
+Started GET "/index" for ::1 at 2022-09-20 04:32:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2022-09-20 04:32:58 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:37:03 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 22)
+Completed 200 OK in 2ms (Views: 1.2ms | Allocations: 270)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:37:04 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:37:05 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:37:05 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.3ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:37:38 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:37:39 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:37:40 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:37:41 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:37:42 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for ::1 at 2022-09-20 04:37:43 +0100
+  
+ActionController::RoutingError (uninitialized constant GreetingsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  GreetingsHelper
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/index" for ::1 at 2022-09-20 04:37:59 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/greetings/index" for ::1 at 2022-09-20 04:38:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/greetings/index"):
+  
+Started GET "/" for ::1 at 2022-09-20 04:38:14 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 19)
+Completed 200 OK in 3ms (Views: 1.4ms | Allocations: 241)
+
+
+Started GET "/v1" for ::1 at 2022-09-20 04:42:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/v1"):
+  
+Started GET "/greetings/v1/messages" for ::1 at 2022-09-20 04:43:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/greetings/v1/messages"):
+  
+Started GET "/greetings/v1" for ::1 at 2022-09-20 04:43:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/greetings/v1"):
+  
+Started GET "/" for ::1 at 2022-09-20 04:44:15 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.1ms | Allocations: 296)
+Completed 200 OK in 12ms (Views: 8.1ms | Allocations: 871)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:44:35 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.0ms | Allocations: 296)
+Completed 200 OK in 20ms (Views: 10.9ms | Allocations: 964)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:44:36 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 221)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:44:36 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.5ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:44:36 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 15)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:44:36 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.4ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:46:02 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.3ms | Allocations: 296)
+Completed 200 OK in 20ms (Views: 13.1ms | Allocations: 943)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:46:03 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 1.0ms | Allocations: 221)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:46:03 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 198)
+
+
+Started GET "/index" for ::1 at 2022-09-20 04:46:07 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/messages" for ::1 at 2022-09-20 04:46:13 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/messages"):
+  
+Started GET "/" for ::1 at 2022-09-20 04:46:16 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 15)
+Completed 200 OK in 1ms (Views: 1.1ms | Allocations: 199)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:46:24 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 15)
+Completed 200 OK in 5ms (Views: 3.5ms | Allocations: 198)
+
+
+Started GET "/index.html" for ::1 at 2022-09-20 04:46:49 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index.html"):
+  
+Started GET "/" for ::1 at 2022-09-20 04:46:54 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 15)
+Completed 200 OK in 6ms (Views: 4.6ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:52:23 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.5ms | Allocations: 15)
+Completed 200 OK in 4ms (Views: 2.5ms | Allocations: 198)
+
+
+Started GET "/" for ::1 at 2022-09-20 04:52:24 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.1ms | Allocations: 198)
+
+
+Started GET "/api/v1/greetings" for ::1 at 2022-09-20 05:09:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/greetings"):
+  
+Started GET "/api/v1/greetings" for ::1 at 2022-09-20 05:12:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/greetings"):
+  
+Started GET "/api/v1/greetings" for ::1 at 2022-09-20 05:12:00 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/greetings"):
+  
+Started GET "/api/v1/message" for ::1 at 2022-09-20 05:12:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/message"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:12:12 +0100
+  
+NoMethodError (undefined method `v1' for Api:Module):
+  
+app/controllers/api/v1/greetings_controller.rb:1:in `<main>'
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:13:07 +0100
+  
+NoMethodError (undefined method `v1' for Api:Module):
+  
+app/controllers/api/v1/greetings_controller.rb:1:in `<main>'
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:13:08 +0100
+  
+NoMethodError (undefined method `v1' for Api:Module):
+  
+app/controllers/api/v1/greetings_controller.rb:1:in `<main>'
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:13:20 +0100
+  
+NameError (uninitialized constant Api::V1::BaseController
+
+class Api::V1::GreetingsController < Api::V1::BaseController
+                                            ^^^^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/greetings_controller.rb:1:in `<main>'
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:13:21 +0100
+  
+NameError (uninitialized constant Api::V1::BaseController
+
+class Api::V1::GreetingsController < Api::V1::BaseController
+                                            ^^^^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/greetings_controller.rb:1:in `<main>'
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:13:49 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (11.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 96ms (Views: 1.1ms | ActiveRecord: 40.2ms | Allocations: 4705)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:13:50 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 584)
+
+
+Started GET "/api/v1/message" for ::1 at 2022-09-20 05:13:54 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/message"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:14:17 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 581)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:14:52 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1565)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:14:52 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 584)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:14:53 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 581)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:14:59 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1562)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:15:00 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 571)
+
+
+Started GET "/api/v1/greetings" for ::1 at 2022-09-20 05:15:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/greetings"):
+  
+Started GET "/api/v1/greetings" for ::1 at 2022-09-20 05:15:33 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/greetings"):
+  
+Started GET "/api/v1/" for ::1 at 2022-09-20 05:15:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+Started GET "/api" for ::1 at 2022-09-20 05:15:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:15:45 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (1.8ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 570)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:24:34 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 38ms (Views: 0.3ms | ActiveRecord: 14.9ms | Allocations: 4550)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:24:35 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 571)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:24:36 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 570)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:24:36 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 570)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:27:43 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.9ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.9ms | Allocations: 570)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:27:44 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 570)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:27:44 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 570)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:27:45 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 570)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:27:45 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 570)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:27:53 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.6ms | Allocations: 297)
+Completed 200 OK in 24ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 929)
+
+
+Started GET "/api" for ::1 at 2022-09-20 05:28:01 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api"):
+  
+Started GET "/api/v1" for ::1 at 2022-09-20 05:28:05 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:28:10 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 661)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:28:24 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.8ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1886)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:28:25 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 708)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:28:26 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 596)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:28:26 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 596)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:40:05 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 0.3ms | ActiveRecord: 16.7ms | Allocations: 4515)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:40:06 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 586)
+
+
+  [1m[36mGreeting Load (0.7ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:41:58 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:41:59 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:41:59 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:42:00 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:42:00 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 600)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:42:01 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:42:04 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:42:05 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 584)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:42:06 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/message" for ::1 at 2022-09-20 05:42:08 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/message"):
+  
+Started GET "/api/v1/message" for ::1 at 2022-09-20 05:42:20 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1580)
+
+
+Started GET "/api/v1/message" for ::1 at 2022-09-20 05:42:21 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 586)
+
+
+Started GET "/api/v1/message" for ::1 at 2022-09-20 05:42:21 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:42:53 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1582)
+
+
+Started GET "/api/v1/messages/index" for ::1 at 2022-09-20 05:42:58 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/index"):
+  
+Started GET "/api/v1/index/messages" for ::1 at 2022-09-20 05:43:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/index/messages"):
+  
+Started GET "/api/v1/message" for ::1 at 2022-09-20 05:43:23 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/message"):
+  
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:43:25 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (1.1ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 585)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:48:32 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:48:33 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:48:33 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:48:33 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:48:33 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (1.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 583)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:48:34 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 584)
+
+
+Started GET "/api/v1/messages" for ::1 at 2022-09-20 05:48:34 +0100
+Processing by Api::V1::GreetingsController#index as JSON
+  [1m[36mGreeting Load (0.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 583)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:48:38 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 302)
+Completed 200 OK in 12ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2306)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:48:39 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.9ms | Allocations: 296)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 981)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:48:40 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 16)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/" for ::1 at 2022-09-20 05:48:40 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 15)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 208)
+
+

@@ -1,0 +1,16 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: Hello World!
+
+two:
+  message: Hello Universe!
+
+Three:
+  message: Hello Galaxy!
+
+Four:
+  message: Hello Multiverse!
+
+Five:
+  message: Hello Welcome to my new rails-react-app!
