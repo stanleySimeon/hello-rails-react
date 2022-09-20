@@ -7851,3 +7851,42 @@ Processing by Api::V1::GreetingsController#index as HTML
 Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 1094)
 
 
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 15:31:52 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (0.6ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 6.5ms | ActiveRecord: 4.9ms | Allocations: 3473)
+
+
+Started GET "/" for ::1 at 2022-09-20 15:33:20 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.3ms | Allocations: 307)
+Completed 200 OK in 11ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2277)
+
+
+Started GET "/" for ::1 at 2022-09-20 15:33:21 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 296)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 983)
+
+
+Started GET "/index" for ::1 at 2022-09-20 15:33:25 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for ::1 at 2022-09-20 15:33:28 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/stanleymartialsimeon/.gem/gems/railties-7.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 16)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 235)
+
+
+Started GET "/api/v1/messages/" for ::1 at 2022-09-20 15:33:33 +0100
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (1.4ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings"[0m
+  ↳ app/controllers/api/v1/greetings_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 1.4ms | Allocations: 1213)
+
+
